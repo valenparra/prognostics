@@ -1,0 +1,54 @@
+site_name: prognostics
+repo_url: https://github.com/valenparra/prognostics
+site_url: https://valenparra.github.io/prognostics
+site_description: The objective of this project is to develop a robust prognostics model that predicts the remaining useful life (RUL) or failure probability of [specific system/asset] based on historical data and current condition monitoring. The aim is to enable proactive maintenance strategies, reduce downtime, and optimize resource allocation.
+site_author: Miguel Parra
+edit_uri: edit/main/docs/
+repo_name: valenparra/prognostics
+copyright: Maintained by <a href="https://valenparra.com">Florian</a>.
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+            setup_commands:
+                - import sys
+                - sys.path.append('../')
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/valenparra/prognostics
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/prognostics
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
