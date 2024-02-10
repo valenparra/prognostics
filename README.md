@@ -22,8 +22,14 @@ git commit -m "init commit"
 git remote add origin git@github.com:valenparra/prognostics.git
 git push -u origin main
 ```
+**Comments on these commands:**
 
-Finally, install the environment and the pre-commit hooks with
+- `git init -b main`: Initializes a new Git repository with the main branch. The -b flag is used to specify the branch name. In this case, it's creating a main branch.
+- `git add .`: Adds all files in the current directory to the staging area. The dot . represents all files.
+- `git commit -m "init commit"`: Commits the changes added to the staging area with a message. In this case, the message is "init commit" indicating the initial commit.
+- `git remote add origin git@github.com:valenparra/prognostics.git`: Adds a remote repository named 'origin' with the URL pointing to your GitHub repository. Replace valenparra/prognostics.git with your GitHub username and repository name.
+- `git push -u origin main`: Pushes the committed changes to the 'main' branch of the remote repository (origin) and sets it as the upstream branch. This command effectively uploads your local changes to your GitHub repository.
+
 
 ```bash
 make install
